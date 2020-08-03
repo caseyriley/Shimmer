@@ -17,7 +17,7 @@ function generateToken(user) {
   };
 }
 
-function restorePlayer(req, res, next) {
+function restoreUser(req, res, next) {
   const { token } = req;
 
   if (!token) {
