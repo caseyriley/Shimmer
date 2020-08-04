@@ -6,6 +6,7 @@ const path = require('path');
 const logger = require('morgan');
 
 const routes = require('./routes');
+const { port } = require('./config');
 
 const app = express();
 
@@ -35,6 +36,6 @@ app.use(function (err, _req, res, _next) {
     });
 });
 
-
-
+app.listen(port)
+console.log(`listening on port ${port}`)
 module.exports = app;
