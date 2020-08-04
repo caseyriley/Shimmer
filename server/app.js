@@ -10,7 +10,7 @@ const { port } = require('./config');
 
 const app = express();
 
-console.log('listening up here')
+
 
 app.use(cors({ origin: true }));
 app.use(helmet({ hsts: false }));
@@ -37,5 +37,5 @@ app.use(function (err, _req, res, _next) {
 });
 
 app.listen(port)
-console.log(`listening on port ${port}`)
+// console.log(`listening on port ${port}`)
 module.exports = app;
