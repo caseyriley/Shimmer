@@ -1,0 +1,14 @@
+/* TODO Add site wide styles */
+.body {
+    color: #212124;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+
+

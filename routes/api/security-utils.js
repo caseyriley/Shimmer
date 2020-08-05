@@ -3,11 +3,11 @@ const jwt = require('jsonwebtoken');
 const uuid = require('uuid').v4;
 
 const { jwtConfig: { secret, expiresIn } } = require('../../config');
-const UserRepository = require('../../db/user-repository');
+const PlayerRepository = require('../../db/player-repository');
 
-function generateToken(user) {
+function generateToken(player) {
   const data = {
-    name: user.name,
+    name: player.name,
   };
   const jwtid = uuid();
 
@@ -17,7 +17,7 @@ function generateToken(user) {
   };
 }
 
-function restoreUser(req, res, next) {
+function restorePlayer(req, res, next) {
   const { token } = req;
 
   if (!token) {
@@ -33,12 +33,12 @@ function restoreUser(req, res, next) {
     const tokenId = payload.jti;
 
     try {
-      req.user = await UserRepository.findByTokenId(tokenId);
+      req.player = await PlayerRepository.findByTokenId(tokenId);
     } catch (e) {
       return next(e);
     }
 
-    if (!req.user.isValid()) {
+    if (!req.player.isValid()) {
       return next({ status: 404, message: 'session not found' });
     }
 
@@ -46,6 +46,6 @@ function restoreUser(req, res, next) {
   });
 }
 
-const authenticated = [bearerToken(), restoreUser];
+const authenticated = [bearerToken(), restorePlayer];
 
 module.exports = { generateToken, authenticated };

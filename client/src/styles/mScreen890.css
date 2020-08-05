@@ -1,0 +1,12 @@
+@media screen and (max-width: 890px) {
+    #get-pro {
+        visibility: hidden;
+    }
+    .nav-c__search {
+        width: 150px;
+    }
+    .nav-c__spacer {
+        width: 0px;
+    }
+}
+

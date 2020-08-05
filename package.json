@@ -11,7 +11,6 @@
     "db:seed:all": "dotenv sequelize-cli db:seed:all",
     "db:seed:undo:all": "dotenv sequelize-cli db:seed:undo:all",
     "dev": "dotenv nodemon ./bin/www",
-    "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix frontend && npm run db:redo",
     "migration:generate": "sequelize-cli migration:generate",
     "model:generate": "sequelize-cli model:generate",
     "seed:generate": "sequelize-cli seed:generate",
