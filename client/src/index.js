@@ -7,6 +7,8 @@ import './styles/index.css';
 import './styles/navBar.css'
 import './styles/pics.css'
 import './styles/belowNav.css'
+import './styles/LoginNav.css'
+import './styles/LoginSearch.css'
 import './styles/mScreenLrg.css'
 import './styles/mScreen1200.css'
 import './styles/mScreen1080.css'

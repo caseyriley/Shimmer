@@ -24,6 +24,7 @@ ul {
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0px;
+  width: 80vw;
 }
 
 li {

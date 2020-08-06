@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     position: fixed;
     left: 0px;
     top: 50px;
@@ -15,7 +15,7 @@
 .below-nav-c__centering-c {
     width: 80vw;
     height: 50px;
-    border: 1px solid cornflowerblue;
+    /* border: 1px solid cornflowerblue; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -23,7 +23,7 @@
 .below-nav-c__centering-c__left-c {
     width: 80%;
     height: 50px;
-    border: 1px solid rgb(0, 179, 161);
+    /* border: 1px solid rgb(0, 179, 161); */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -31,7 +31,7 @@
 .below-nav-c__centering-c__right-c {
     width: 20%;
     height: 50px;
-    border: 1px solid rgb(227, 125, 0);
+    /* border: 1px solid rgb(227, 125, 0); */
     display: flex;
     justify-content: flex-end;
     align-items: center;

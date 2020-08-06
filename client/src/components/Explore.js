@@ -10,9 +10,6 @@ const Explore = () => {
   let numPics = 500;
   let searchArray = ['mystical']
   let searchString = searchArray.toString()
-  const rand = function getRandomInt(max) {
-    return Math.floor(Math.random() * Math.floor(max));
-  }
 
   useEffect(() => {
     // alert(process.env.REACT_APP_API_KEY);

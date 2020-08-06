@@ -44,7 +44,6 @@ const NavBar = () => {
                 <NavLink id="get-pro" to="/" activeClassName="nav-c__link-box__link" >Get Pro</NavLink>
             </div>
             <div className="nav-c__spacer"></div>
-            {/* <div className="nav-c__search"> <span>search</span> </div> */}
             <SearchBar></SearchBar>
             <div className="nav-c__icon-c">
                 <img id="cloudArrow" alt='aroow' src={require("../images/cloudArrow.png")}/>

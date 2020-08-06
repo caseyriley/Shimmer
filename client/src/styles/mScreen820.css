@@ -13,7 +13,11 @@
     }
 .nav-c__link-box__link {
     visibility: hidden;
+    width: 0px;
+    position: absolute;
+    
 }
+
 .below-nav-c__centering-c__right-c {
     justify-content: flex-start;
 }
@@ -26,7 +30,7 @@
 .below-nav-c__centering-c__left-c {
     width: 270px;
     height: 50px;
-    border: 1px solid rgb(0, 179, 161);
+    /* border: 1px solid rgb(0, 179, 161); */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -60,6 +64,7 @@ ul {
   flex-direction: row;
   list-style-type: none;
   padding: 0px;
+  width: 100vw;
 
 }
 
