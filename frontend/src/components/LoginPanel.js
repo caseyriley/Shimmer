@@ -10,7 +10,7 @@ const LoginPanel = ({ token, login }) => {
 
   const [pictures, setPictures] = useState('Not getting picks')
   const [pic, setPic] = useState('background')
-  let numPics = 1git 00;
+  let numPics = 100;
   let searchArray = ['nature', 'pro', 'background']
   let searchString = searchArray.toString()
 
