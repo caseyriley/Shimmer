@@ -10,11 +10,9 @@ const LoginPanel = ({ token, login }) => {
 
   const [pictures, setPictures] = useState('Not getting picks')
   const [pic, setPic] = useState('background')
-  let numPics = 200;
+  let numPics = 1git 00;
   let searchArray = ['nature', 'pro', 'background']
   let searchString = searchArray.toString()
-
-
 
   useEffect(() => {
     // alert(process.env.REACT_APP_API_KEY);
@@ -48,13 +46,9 @@ const LoginPanel = ({ token, login }) => {
   const updateEmail = e => setEmail(e.target.value);
   const updatePassword = e => setPassword(e.target.value);
 
-  
-
   if (token) {
     return <Redirect to="/" />;
   }
-
-  
 
   return (
     

@@ -25,7 +25,7 @@ const App = ({ needLogin, loadToken }) => {
   if (!loaded) {
     return null;
   }
-  console.log(process.env)
+  
   return (
     <BrowserRouter>
       <Switch>
