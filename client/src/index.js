@@ -12,6 +12,7 @@ import './styles/mScreen1200.css'
 import './styles/mScreen1080.css'
 import './styles/mScreen890.css'
 import './styles/mScreen820.css'
+import './styles/mScreen565.css'
 
 const store = configureStore();
 

@@ -1,0 +1,45 @@
+@media screen and (max-width: 564px) {
+    body {
+        width: 100vw;
+    }
+    .pic-array-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 2000px;
+    margin-top: 150px;
+    box-sizing: border-box;
+    border-color: 20px solid blue;
+    
+}
+    .pic {
+    height: 65vh;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    
+}
+ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0px;
+
+}
+
+li {
+  height: 65vh; 
+  flex-grow: 1;
+  margin: 3px;
+  display: inline-block;
+  width: 100vw;
+}
+.pic-frame {
+    height: 65vh;
+    flex-grow: 1;
+}
+}

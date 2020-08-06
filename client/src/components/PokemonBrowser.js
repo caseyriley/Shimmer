@@ -30,7 +30,8 @@ const PokemonBrowser = ({
 
   return (
     <main>
-      <LogoutButton token={token} />
+      {/* <LogoutButton token={token} /> */}
+      <Explore token={token} ></Explore>
       <nav>
         {/* <Explore></Explore> */}
         {/* <Fab hidden={formVisible} onClick={showForm} />
@@ -53,7 +54,7 @@ const PokemonBrowser = ({
 
       {formVisible ?
         <PokemonForm token={token} /> :
-        <Route path="/pokemon/:id" render={props => <Explore {...props} token={token} />} />
+        <Route path="/pokemon/:id" render={(props) => <Explore {...props} token={token} />} />
       }
     </main>
   );

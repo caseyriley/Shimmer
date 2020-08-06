@@ -21,7 +21,7 @@ const Explore = () => {
       return response.json();
     })
     .then(function(j){
-      alert(JSON.stringify(j));
+      // alert(JSON.stringify(j));
       let picArray = j.photos.photo.map((pic) => {
         let srcPath = 'https://farm'+pic.farm+'.staticflickr.com/'+pic.server+'/'+pic.id+'_'+pic.secret+'.jpg';
         

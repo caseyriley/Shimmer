@@ -13,7 +13,42 @@
     align-items: center;
     
 }
+#tranform-box {
+    visibility: hidden;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.tranform-box__line {
+    width: 16px;
+    height: 2px;
+    position: absolute;
+    background-color: white;
+    transition: transform .4s;
+    transition: top .4s;
+    
+}
+.tranform-box__line-1 {
+    top: 18px;
+}
 
+.tranform-box__line-3 {
+    top: 30px;
+}
+.transform-1 {
+    transform: rotate(-45deg);
+    top: 25px;
+}
+.transform-2 {
+    visibility: hidden;
+}
+.transform-3 {
+    transform: rotate(45deg);
+    top: 25px;
+}
 #icon-flickr_logo {
     height: 50px;
     filter: invert();
@@ -108,9 +143,78 @@
 #camera {
     height: 33px;
     width: 33px;  
+    position: relative;
     background-image: url(//combo.staticflickr.com/pw/images/buddyicon05.png#189534489@N02);
     border-radius: 50%;
     background-position: center;
     background-size: 100%;
     margin-left: 18px;
+}
+#camera__dropdown {
+    position: absolute;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    top: 50px;
+    left: -260px;
+    
+    height: 320px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 2px 1px 2px 2px rgba(147, 147, 147, 0.1);
+    z-index: 2;
+    border-radius: 3px;
+    border: 1px solid rgb(160, 160, 160);
+    /* visibility: hidden; */
+
+}
+.camera__dropdown__greeting {
+    margin: 0px 15px 15px 15px;
+    color: #212124;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+.camera__dropdown__paragraph {
+    margin: 0px 15px 15px 15px;
+    color: #b3b3b3;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+}
+.camera__dropdown__items-box {
+    width: 100%;
+    height: 90px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    margin-bottom: 15px;
+    
+}
+.camera__dropdown__nav-link {
+    margin: 0px 0px 8px 15px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+}
+#logout-button-holder button{
+    margin: 0px 0px 15px 15px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 0px;  
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+}
+.visibility {
+    visibility: visible;
+}
+.hidden {
+    visibility: hidden;
 }

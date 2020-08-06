@@ -9,6 +9,7 @@
     left: 0px;
     top: 50px;
     background-color: rgb(255, 255, 255, .95);
+    z-index: 2;
 
 }
 .below-nav-c__centering-c {
