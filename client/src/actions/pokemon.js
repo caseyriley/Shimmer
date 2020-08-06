@@ -1,4 +1,4 @@
-import { baseUrl } from '../config';
+import { imageUrl } from '../config';
 
 export const HIDE_FORM = 'HIDE_FORM';
 export const LOAD = 'LOAD';
@@ -31,7 +31,7 @@ const setCurrent = current => ({
 
 export const createPokemon = data => async (dispatch, getState) => {
   const { authentication: { token } } = getState();
-  const response = await fetch(`${baseUrl}/pokemon`, {
+  const response = await fetch(`${imageUrl}/pokemon`, {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ export const createPokemon = data => async (dispatch, getState) => {
 
 export const getOnePokemon = id => async (dispatch, getState) => {
   const { authentication: { token } } = getState();
-  const response = await fetch(`${baseUrl}/pokemon/${id}`, {
+  const response = await fetch(`${imageUrl}/pokemon/${id}`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -62,7 +62,7 @@ export const getOnePokemon = id => async (dispatch, getState) => {
 
 export const getPokemon = () => async (dispatch, getState) => {
   const { authentication: { token } } = getState();
-  const response = await fetch(`${baseUrl}/pokemon`, {
+  const response = await fetch(`${imageUrl}/api/pokemon`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -76,7 +76,7 @@ export const getPokemon = () => async (dispatch, getState) => {
 
 export const getPokemonTypes = () => async (dispatch, getState) => {
   const { authentication: { token } } = getState();
-  const response = await fetch(`${baseUrl}/pokemon/types`, {
+  const response = await fetch(`${imageUrl}/api/pokemon/types`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

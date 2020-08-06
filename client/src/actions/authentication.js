@@ -1,4 +1,5 @@
-import { baseUrl } from '../config';
+// import { baseUrl } from '../config';
+import { imageUrl } from '../config';
 
 const TOKEN_KEY = 'pokedex/authentication/token';
 export const SET_TOKEN = 'SET_TOKEN';
@@ -21,7 +22,7 @@ export const loadToken = () => async dispatch => {
 };
 
 export const login = (email, password) => async dispatch => {
-  const response = await fetch(`${baseUrl}/session`, {
+  const response = await fetch(`${imageUrl}/api/session`, {
     method: 'put',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password }),
@@ -37,7 +38,7 @@ export const login = (email, password) => async dispatch => {
 
 export const logout = () => async (dispatch, getState) => {
   const { authentication: { token } } = getState();
-  const response = await fetch(`${baseUrl}/session`, {
+  const response = await fetch(`${imageUrl}/api/session`, {
     method: 'delete',
     headers: { Authorization: `Bearer ${token}` },
   });
