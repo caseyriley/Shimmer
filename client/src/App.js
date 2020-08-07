@@ -6,6 +6,7 @@ import LoginPanel from './components/LoginPanel';
 import PokemonBrowser from './components/PokemonBrowser';
 import { loadToken } from './actions/authentication';
 
+
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
     rest.needLogin === true

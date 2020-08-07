@@ -32,6 +32,47 @@
     width: 25vw;
     border: 5px solid green;
 }
+#login-nav-c__login {
+    height: 20px;
+    width: 50px;
+    z-index: 1;
+    position: fixed;
+    top: 17px;
+    right: 135px;
+    color: white;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+#login-nav-c__signup {
+    height: 20px;
+    width: 40px;
+    z-index: 1;
+    position: fixed;
+    top: 12px;
+    right: 35px;
+    color: #000;
+    background-color: #fff;
+    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 3px;
+    height: 32px;
+    line-height: 32px;
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login-magnifying-glass--right{
+    visibility: hidden;
+}
+
+
+
+
+
+
 #main__c {
     width: 100vw;
     height: 100vh;
@@ -41,6 +82,10 @@
     left:0px;
     top: 0px;
     margin: 0px;
+    transition: filter .5s;
+}
+.blur {
+    filter: blur(5px) brightness(0%);
 }
 
 #login-form-c {
@@ -58,6 +103,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+
 }
 #balls {
     margin-top: 25px;
@@ -142,4 +188,12 @@
     color: #212124;
     border: none;
     
+}
+#invisible-click-box {
+    height: 35px;
+    width: 155px;
+    position: fixed;
+    top: 10px;
+    right: 31px;
+    z-index: 11;
 }

@@ -10,9 +10,16 @@ const LoginPanel = ({ token, login }) => {
 
   const [pictures, setPictures] = useState('Not getting picks')
   const [pic, setPic] = useState('background')
-  let numPics = 100;
-  let searchArray = ['nature', 'pro', 'background']
+  const [blurState, setBlurState] = useState(false);
+  let numPics = 250;
+  let searchArray = ['plants', 'landscape']
   let searchString = searchArray.toString()
+
+  const [dropD, setdropD] = useState(false);
+  const toggleDropdown = () => {
+    const nextState = !dropD;
+    setdropD(nextState);
+  };
 
   useEffect(() => {
     console.log(process.env.REACT_APP_API_KEY);
@@ -31,8 +38,12 @@ const LoginPanel = ({ token, login }) => {
             setPic(lookupPic(picCount));
             picCount ++;
             setInterval(() => {
-              
+              setBlurState(true);
               setPic(lookupPic(picCount));
+              setTimeout(() => {
+                setBlurState(false);
+              }, 500);
+              // setBlurState(false);
               picCount ++;
             }, 5000);
       })
@@ -54,37 +65,41 @@ const LoginPanel = ({ token, login }) => {
     
     <main className="centered middled">
         <LoginNav></LoginNav>
+      <div id={'invisible-click-box'} onClick={toggleDropdown} ></div>
       <div id={'main__c'} style={{
         backgroundImage: 'url(' + pic + ')',
         backgroundSize: "cover",
         height: "100vh",
         color: "#f5f5f5"
-      }}>
-        <div id="login-form-c">
-          <svg id={'balls'} viewBox="0 0 24 24">
-            <circle cx="6" cy="12" r="5" fill="#005fde"></circle>
-            <circle cx="18" cy="12" r="5" fill="#ff0084"></circle>
-          </svg>
-          <span id={"log-in-to-shimmer"}>Log in to Shimmer</span>
-          <form id="login-form" onSubmit={handleSubmit}>
-            
-            <input
-              id={'email-input'}
-              type="text"
-              placeholder="Email"
-              value={email}
-              onChange={updateEmail} />
-            <input
-              id={'password-input'}
-              type="password"
-              placeholder="Password"
-              value={password}
-              onChange={updatePassword} />
-            <div id={'login-button-c'}>
-              <button id={'login-button-c__button'} type="submit">Login</button>
-            </div>
-          </form>
-        </div>
+      }}
+        className={`${blurState ? "blur" : "no-blur"}`}
+        >
+        
+      </div>
+      <div id="login-form-c" className={`${dropD ? "visible" : "hidden"}`} >
+        <svg id={'balls'} viewBox="0 0 24 24">
+          <circle cx="6" cy="12" r="5" fill="#005fde"></circle>
+          <circle cx="18" cy="12" r="5" fill="#ff0084"></circle>
+        </svg>
+        <span id={"log-in-to-shimmer"}>Log in to Shimmer</span>
+        <form id="login-form" onSubmit={handleSubmit}>
+
+          <input
+            id={'email-input'}
+            type="text"
+            placeholder="Email"
+            value={email}
+            onChange={updateEmail} />
+          <input
+            id={'password-input'}
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={updatePassword} />
+          <div id={'login-button-c'}>
+            <button id={'login-button-c__button'} type="submit">Login</button>
+          </div>
+        </form>
       </div>
     </main>
   );

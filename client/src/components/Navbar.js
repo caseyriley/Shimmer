@@ -1,11 +1,15 @@
 import React, { useContext, useEffect, useState, useRef, Component } from 'react';
+import { shallowEqual, useSelector } from 'react-redux'
 import { NavLink, Route } from "react-router-dom";
 import SearchBar from './SearchBar';
 import LogoutButton from './LogoutButton';
 import configureStore from '../store'
 
 
+
 const NavBar = () => {
+    // const selectedData = useSelector(searchFunction, shallowEqual)
+    
     const rand = function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
@@ -44,7 +48,7 @@ const NavBar = () => {
                 <NavLink id="get-pro" to="/" activeClassName="nav-c__link-box__link" >Get Pro</NavLink>
             </div>
             <div className="nav-c__spacer"></div>
-            <SearchBar></SearchBar>
+            <SearchBar ></SearchBar>
             <div className="nav-c__icon-c">
                 <img id="cloudArrow" alt='aroow' src={require("../images/cloudArrow.png")}/>
                 <svg viewBox="0 0 24 24" id="icon-search"><path d="M21.707 18.88l-4.823-4.824A7.945 7.945 0 0 0 18 10c0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c1.48 0 2.865-.412 4.056-1.116l4.823 4.823a1 1 0 0 0 1.413 0l1.414-1.414a1 1 0 0 0 0-1.414zM4 10c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6z"></path></svg>

@@ -79,4 +79,46 @@ li {
     height: 65vh;
     flex-grow: 1;
 }
+
+/* ///////LoginNav////////// */
+.login-search-c__search{
+    top: -200px;
+}
+#login-magnifying-glass--right{
+    filter:  invert() ;
+    height: 24px;
+    width: 24px;
+    position: fixed;
+    right: 125px;
+    top: 20px;
+    visibility: visible;
+
+}
+#login-nav-c__login {
+    
+    top: 17px;
+    right: 20px;
+    height: 30px;
+    width: 70px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+#login-nav-c__login span {
+    top: -1px;
+    position: relative;
+}
+#login-nav-c__signup {
+    visibility: hidden;
+    position: absolute;
+    top: -200px;
+}
+#invisible-click-box {
+    height: 35px;
+    width: 76px;
+    top: 15px;
+    right: 16px;
+}
 }
