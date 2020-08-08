@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState, useRef} from 'react';
+import React, {useContext, useEffect, useState, useRef, forceUpdate} from 'react';
 import {NavLink, Route} from "react-router-dom";
 import NavBar from './Navbar';
 import BelowNav from './BelowNav';
@@ -8,21 +8,28 @@ import PickZoom from './PickZoom';
 
 
 const Explore = () => {
-  const [pictures, setPictures] = useState('Not getting picks')
-  let numPics = 500;
-  let searchArray = ['mystical']
-  const [searchArrayState, setSearchArray] = useState(['mystical'])
-  searchArray = searchArrayState;
-  let searchString = searchArray.toString()
-  const searchFunction = setSearchArray;
+
+  const [pictures, setPictures] = useState('🌟 Wait for it 🌟')
+  let numPics = 250;
+
+  const [searchArrayState, setSearchArray] = useState(['fun'])
+  console.log(searchArrayState)
+  
+  let searchString = searchArrayState.toString()
+
+  
+  const searchFunction = (srch) => {
+    setSearchArray(srch)
+  
+  }
+
 
   const [fullScreen, setFullScreen] = useState(false);
-  // useEffect(() => { console.log('drop drip') },[])
   const toggleFullScreen = () => {
-    console.log('drop drip')
     const nextState = !fullScreen;
     setFullScreen(nextState);
   };
+  
 
 
   const [largePic, setLargePic] = useState('finding pic')
@@ -40,9 +47,10 @@ const Explore = () => {
     toggleFullScreen();
     turnOffStar();
   }
+
   useEffect(() => {
     // alert(process.env.REACT_APP_API_KEY);
-    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags='+searchString+'&per_page='+numPics+'&page=1&format=json&nojsoncallback=1')
+    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + searchArrayState.toString()+'&per_page='+numPics+'&page=1&format=json&nojsoncallback=1')
     .then(function(response){
       return response.json();
     })
@@ -54,7 +62,6 @@ const Explore = () => {
         const zoomFunction = () => {
           setLargePic(srcPath);
           toggleFullScreen()
-          console.log('drip sauce')
         }
 
         return(
@@ -69,30 +76,28 @@ const Explore = () => {
       })
       setPictures(picArray);
     })
-  }, [])
+  }, [JSON.stringify(searchArrayState)])
 
   
     return (
       <div>
         <header>
-          {/* <h1>Glimmerzzz</h1> */}
         </header>
-        <NavBar searchFunction={"searchFunction"} ></NavBar>
-        {/* <NavBar searchFunction={searchFunction} ></NavBar> */}
-        <BelowNav></BelowNav>
-        {/* <div id="full-screen" className={`${fullScreen ? "visible" : "hidden"}`} >
-          <img src={largePic}/>
-          <svg id="star" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-e</title><path d="M480,208H308L256,48,204,208H32l140,96L118,464,256,364,394,464,340,304Z" className={`${starState ? "star-none" : "star-fill"}`} onClick={toggleStar}/></svg>
-          <div id="star-backing" onClick={toggleStar}></div>                                                                                                                                                                                                             
-        </div> */}
+        <NavBar searchFunction={searchFunction} ></NavBar>
+        <BelowNav fullScreen={fullScreen} ></BelowNav>
+
         <PickZoom fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
-        
-        <div className="pic-array-container" >
-          <ul>
-          {pictures}
-          </ul>
+        <div 
+        // className={`${ fullScreen ? 'backwards' : 'foreground'}`}
+        >
+          <div className="pic-array-container" >
+            <ul>
+            {pictures}
+            </ul>
+          </div>
         </div>
       </div>
+      
     );
 
       

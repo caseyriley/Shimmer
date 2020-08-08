@@ -8,7 +8,7 @@
     /* max-width: 80%; */
     margin-left: auto;
     margin-right: auto;
-    margin-top: 150px;
+    margin-top: 100px;
     box-sizing: border-box;
     border-color: 20px solid blue;
 }
@@ -25,6 +25,11 @@ ul {
   list-style-type: none;
   padding: 0px;
   width: 80vw;
+  margin: auto;
+  /* position: absolute; */
+  overflow: hidden; 
+  
+  
 }
 
 li {
@@ -35,4 +40,8 @@ li {
 .pic-frame {
     height: 40vh;
     flex-grow: 1;
+}
+.backwards {
+  /* z-index: -1; */
+  opacity: 0%;
 }

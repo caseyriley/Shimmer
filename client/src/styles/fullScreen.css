@@ -1,6 +1,6 @@
 #full-screen{
-    margin-top: 80px;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     height: 100vh;
     width: 100vw;
     background-color: rgb(50, 49, 49);
@@ -10,6 +10,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.full-screen__pic {
+    max-height: 77vh;
+}
+#back-arrow {
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    top: 120px;
+    left: 30px;
+    filter: invert();
+}
+#back-arrow_text {
+    height: 30px;
+    width: 200px;
+    position: fixed;
+    top: 110px;
+    left: 70px;
+    filter: invert();
 }
 #star {
     position: fixed;

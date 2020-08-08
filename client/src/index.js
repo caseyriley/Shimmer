@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import configureStore from './store';
+// import { composeWithDevTools } from "redux-devtools-extension" //for chrome plugin//
 import App from './App';
+
 import './styles/index.css';
 import './styles/navBar.css'
 import './styles/pics.css'

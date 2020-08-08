@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink, Route } from "react-router-dom";
 
-const BelowNav = () => {
-
+const BelowNav = (props) => {
+    // const fullScreenState = props.fullScreen;
     return(
-        <div className='below-nav-c'>
+        <div id='below-nav-c' className={`${props.fullScreen ? "backwards" : "foreground"}`} >
             <div className='below-nav-c__centering-c'>
                 <div className='below-nav-c__centering-c__left-c' >
                     <NavLink className="left-c__link-1" to={'/'}>Explore</NavLink>

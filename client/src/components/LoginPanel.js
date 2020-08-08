@@ -39,7 +39,10 @@ const LoginPanel = ({ token, login }) => {
             picCount ++;
             setInterval(() => {
               setBlurState(true);
-              setPic(lookupPic(picCount));
+              setTimeout(() => {
+                setPic(lookupPic(picCount));
+              }, 150);
+              
               setTimeout(() => {
                 setBlurState(false);
               }, 500);
