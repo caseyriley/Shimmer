@@ -1,12 +1,32 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import NavBar from './Navbar';
 import ACTIONS from '../App';
 
 const YourGallery = (props) => {
+    // const [pictures, setPictures] = useState('🌟 Wait for it 🌟')
     const [galleryPictures, setGalleryPictures] = useState('🌟 Wait for it 🌟')
-   
+    console.log('galleryprops', props.gallery)
+    console.log('gallerypic', galleryPictures)
 
-    
+    useEffect(()=>{
+        let count = 0;
+        let picArray = props.gallery.map((srcPath)=>{
+            count++;
+            return (
+                <li 
+                // key={pic.id} 
+                key={count} 
+                >
+                    <img className="gallery-pic" loading="lazy" alt="loading..."
+                    //  onClick={zoomFunction} 
+                     src={
+                        srcPath ? srcPath : "https://twistedsifter.files.wordpress.com/2019/04/mystical-by-nei-burnell-2.jpg"
+                    }></img>
+                </li>
+            )
+        })
+        setGalleryPictures(picArray);
+    }, [props.gallery])
 
     return (
         <div id="your-gallery" className={`${props.galleryPageState ? 'page-showing' : 'page-hidden'}`}>
@@ -17,11 +37,11 @@ const YourGallery = (props) => {
                 <p id="your-gallery__title">Your Gallery</p>
                 <p id="your-gallery__description">a gallery currated by you!</p>
             </div>
-            <div id="your-gallery__pic-c">
+            <div id="your-gallery__pic-c" className={`${props.galleryPageState ? 'page-showing' : 'page-hidden'}`} >
 
                 <div className="pic-array-container" >
                     <ul>
-                        {/* {pictures} */}
+                        {galleryPictures}
                     </ul>
                 </div>
 

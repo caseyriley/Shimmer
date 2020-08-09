@@ -11,7 +11,7 @@ import YourGallery from './YourGallery';
 
 const Explore = () => {
  
-  const [gallery, setgallery] = useState(['woop']);
+  const [gallery, setgallery] = useState([]);
 
   const addToGallery = (largePic) => {
     setgallery([...gallery, largePic])
