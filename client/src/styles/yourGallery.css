@@ -8,7 +8,14 @@
     justify-content: center;
     align-items: flex-start;
     overflow: scroll;
+    background-color: white;
+    z-index: 0;
+    opacity: 0%;
 
+}
+.page-showing{
+    z-index: 2 !important;
+    opacity: 100% !important;
 }
 #your-gallery-top {
     position: absolute;

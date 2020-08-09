@@ -4,15 +4,16 @@ import ACTIONS from '../App';
 
 const YourGallery = (props) => {
     const [galleryPictures, setGalleryPictures] = useState('🌟 Wait for it 🌟')
-    console.log(props.starGallery)
+   
 
     
 
     return (
-        <div id="your-gallery">
+        <div id="your-gallery" className={`${props.galleryPageState ? 'page-showing' : 'page-hidden'}`}>
+        {/* <div id="your-gallery" className='page-showing'> */}
             <NavBar></NavBar>
             <div id="your-gallery-top">
-                <div> <ion-icon id="your-gallery__back-arrow" name="arrow-back-outline"></ion-icon> <p id="your-gallery__back-arrow_text" >Back to explore</p> </div>
+                <div onClick={props.hideGallery}> <ion-icon id="your-gallery__back-arrow" name="arrow-back-outline"></ion-icon> <p id="your-gallery__back-arrow_text" >Back to explore</p> </div>
                 <p id="your-gallery__title">Your Gallery</p>
                 <p id="your-gallery__description">a gallery currated by you!</p>
             </div>

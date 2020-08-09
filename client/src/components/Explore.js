@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState, useRef, forceUpdate} from 'react';
+import React, {useContext, useEffect, useState, useRef, useReducer} from 'react';
 import {NavLink, Route} from "react-router-dom";
 import NavBar from './Navbar';
 import BelowNav from './BelowNav';
@@ -8,7 +8,29 @@ import YourGallery from './YourGallery';
 
 
 
-const Explore = (dispatch, starGallery) => {
+
+const Explore = () => {
+ 
+  const [gallery, setgallery] = useState(['woop']);
+
+  const addToGallery = (largePic) => {
+    setgallery([...gallery, largePic])
+  }
+
+  const [galleryPageState, setGalleryPageState] = useState(false);
+  const showGalleryPage = () => {
+    setGalleryPageState(true)
+  }
+
+  const hideGallery = () => {
+    setGalleryPageState(false)
+  }
+
+  console.log(gallery)
+
+ 
+
+  
   
 
   const [pictures, setPictures] = useState('🌟 Wait for it 🌟')
@@ -84,9 +106,10 @@ const Explore = (dispatch, starGallery) => {
       <div>
         <header>
         </header>
-        <NavBar searchFunction={searchFunction} ></NavBar>
+        <NavBar hideGallery={hideGallery} showGalleryPage={showGalleryPage} searchFunction={searchFunction} ></NavBar>
         <BelowNav fullScreen={fullScreen} ></BelowNav>
-        <PickZoom fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} dispatch={dispatch} starGallery={starGallery} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
+        <PickZoom addToGallery={addToGallery} fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
+        <YourGallery hideGallery={hideGallery} galleryPageState={galleryPageState} gallery={gallery} ></YourGallery>
         <div 
         // className={`${ fullScreen ? 'backwards' : 'foreground'}`}
         >
