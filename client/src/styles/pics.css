@@ -28,8 +28,6 @@ ul {
   margin: auto;
   /* position: absolute; */
   overflow: hidden; 
-  
-  
 }
 
 li {
@@ -42,6 +40,6 @@ li {
     flex-grow: 1;
 }
 .backwards {
-  /* z-index: -1; */
+  top: -500px !important;
   opacity: 0%;
 }

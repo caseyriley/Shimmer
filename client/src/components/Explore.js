@@ -3,17 +3,18 @@ import {NavLink, Route} from "react-router-dom";
 import NavBar from './Navbar';
 import BelowNav from './BelowNav';
 import PickZoom from './PickZoom';
+import YourGallery from './YourGallery';
 
 
 
 
-const Explore = () => {
+const Explore = (dispatch, starGallery) => {
+  
 
   const [pictures, setPictures] = useState('🌟 Wait for it 🌟')
   let numPics = 250;
 
-  const [searchArrayState, setSearchArray] = useState(['fun'])
-  console.log(searchArrayState)
+  const [searchArrayState, setSearchArray] = useState(['festival'])
   
   let searchString = searchArrayState.toString()
 
@@ -85,8 +86,7 @@ const Explore = () => {
         </header>
         <NavBar searchFunction={searchFunction} ></NavBar>
         <BelowNav fullScreen={fullScreen} ></BelowNav>
-
-        <PickZoom fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
+        <PickZoom fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} dispatch={dispatch} starGallery={starGallery} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
         <div 
         // className={`${ fullScreen ? 'backwards' : 'foreground'}`}
         >

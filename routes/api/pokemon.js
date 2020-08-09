@@ -47,4 +47,6 @@ router.get('/:id', authenticated, asyncHandler(async function(req, res) {
   res.json(pokemon);
 }));
 
+
+
 module.exports = router;

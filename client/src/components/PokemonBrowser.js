@@ -16,9 +16,10 @@ const PokemonBrowser = ({
   pokemonList,
   formVisible,
   getPokemon,
-  showForm
-}) => {
+  showForm, 
+}, props) => {
   const { pokemonId } = match.params;
+  // console.log('poke', starGallery)
 
   useEffect(() => {
     getPokemon();
@@ -31,7 +32,7 @@ const PokemonBrowser = ({
   return (
     <main>
       {/* <LogoutButton token={token} /> */}
-      <Explore token={token} ></Explore>
+      <Explore token={token} starGallery={props.starGallery} dispatch={props.dispatch} ></Explore>
       <nav>
         {/* <Explore></Explore> */}
         {/* <Fab hidden={formVisible} onClick={showForm} />

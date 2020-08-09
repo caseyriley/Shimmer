@@ -1,17 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
+import ACTIONS from '../App';
+
 
 
 const PickZoom = (props) => {
-    const backArrowStyle1 = "fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px";
-    const backArrowStyle2 = "fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px";
+    const [zoomState, setZoomState] = useState(true);
+    const zoomMore = () => {
+        const nextState = !zoomState;
+        setZoomState(nextState);
+    }
+
+    // function addToGallery() {
+    //     props.dispatch({ type: ACTIONS.ADDTOGALLERY, payload: { largePic: props.largePic } });
+    // }
+    // addToGallery(['jambo!'])
+    console.log('pickzoom', props)
+    // const [yourGallery, setYourGallery] = useState([]);
+
+    // const addToGallery = () => {
+    //     setYourGallery([...yourGallery,props.largePic])
+    //     console.log(yourGallery)
+    // }
+
+    // function addToGallery(largePic) {
+    //     dispatch({ type: ACTIONS.ADDTOGALLERY, payload: { largePic: largePic } });
+    // }
+    // addToGallery('working!!!!!')
+
     return (
-        <div id="full-screen"  className={`${props.fullScreen ? "visible" : "hidden"}`} >
-            <img className="full-screen__pic" src={props.largePic} onClick={props.zoomOut}/>
+        <div id="full-screen" className={`${props.fullScreen ? "visible" : "hidden"} ${zoomState ? "normal-size" : "zoomed-in"}`} >
+            <img onClick={zoomMore} className={`${zoomState ? "normal-size" : "zoomed-in"} "full-screen__pic"`} src={props.largePic}  />
             {/* <img src={"arrow.svg"} /> */}
-            <div> <ion-icon id="back-arrow" name="arrow-back-outline"></ion-icon> <p id="back-arrow_text" >Back to explore</p> </div>
-            <ion-icon id="star" name="star-outline"></ion-icon>
-            {/* <svg id="star" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-e</title><path d="M480,208H308L256,48,204,208H32l140,96L118,464,256,364,394,464,340,304Z" className={`${props.starState ? "star-none" : "star-fill"}`} onClick={props.toggleStar} /></svg> */}
-            <div id="star-backing" onClick={props.toggleStar}></div>
+            <div onClick={props.zoomOut} className={`${zoomState ? "normal-size" : "hidden"}`} > <ion-icon id="back-arrow" name="arrow-back-outline"></ion-icon> <p id="back-arrow_text" >Back to explore</p> </div>
+            {/* <ion-icon id="star" className={`${props.starState ? "star-none" : "star-fill"}`} onClick={props.toggleStar} name="star-outline"></ion-icon> */}
+            <svg id="star" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><title>ionicons-v5-e</title><path d="M480,208H308L256,48,204,208H32l140,96L118,464,256,364,394,464,340,304Z" className={`${props.starState ? "star-none" : "star-fill"}`} onClick={props.toggleStar} /></svg>
+            <div id="star-backing" onClick={()=>{props.toggleStar();}}></div>
         </div>
     )
     

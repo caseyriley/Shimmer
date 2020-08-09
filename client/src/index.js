@@ -12,12 +12,14 @@ import './styles/belowNav.css'
 import './styles/LoginNav.css'
 import './styles/LoginSearch.css'
 import './styles/fullScreen.css'
+import './styles/yourGallery.css'
 import './styles/mScreenLrg.css'
 import './styles/mScreen1200.css'
 import './styles/mScreen1080.css'
 import './styles/mScreen890.css'
 import './styles/mScreen820.css'
 import './styles/mScreen565.css'
+
 
 const store = configureStore();
 
