@@ -31,8 +31,8 @@ const setCurrent = current => ({
 
 export const createPokemon = data => async (dispatch, getState) => {
   const { authentication: { token } } = getState();
-  const response = await fetch(`${imageUrl}/pokemon`, {
-    method: 'post',
+  const response = await fetch(`${imageUrl}/api/pokemon`, {
+    method: 'post',                      ///// ? api addition///////
     headers: {
       'Content-Type': 'application/json',
       Authorization: `Bearer ${token}`,
