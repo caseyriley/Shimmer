@@ -50,23 +50,12 @@
     transform: rotate(45deg);
     top: 25px;
 }
-/* #icon-flickr_logo {
-    height: 50px;
-    filter: invert();
-    margin-left: 10vw;
-    position: relative;
-    top: 2px;
-} */
-
 .shimmer-explore {
     position: relative;
     height: 75px;
     width: 135px;
     filter: invert(); 
-    top: 4px;  
-    transition: fill .5s, hue-rotate 10s;
-    
-                
+    top: 4px;               
 }
 .shimmer-explore:hover {
     width: 135px;
@@ -94,7 +83,6 @@
 .nav-c__spacer {
     width: 150px;
     height: 50px;
-    /* border: 1px solid lightblue; */
     flex-shrink: 5;
 }
 
@@ -135,8 +123,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    /* border: 1px solid green; */
-    margin-right: 10vw;;
+    margin-right: 10vw;
 }
 #cloudArrow {
     height: 33px;
@@ -173,7 +160,6 @@
     align-items: flex-start;
     top: 50px;
     left: -260px;
-    
     height: 320px;
     width: 300px;
     background-color: white;
@@ -181,8 +167,6 @@
     z-index: 2;
     border-radius: 3px;
     border: 1px solid rgb(160, 160, 160);
-    /* visibility: hidden; */
-
 }
 .camera__dropdown__greeting {
     margin: 0px 15px 15px 15px;
@@ -192,7 +176,6 @@
     line-height: 24px;
     font-weight: 600;
     margin-bottom: 8px;
-    word-break: break-word;
 }
 .camera__dropdown__paragraph {
     margin: 0px 15px 15px 15px;
