@@ -26,7 +26,6 @@ const Explore = () => {
     setGalleryPageState(false)
   }
 
-  console.log(gallery)
 
  
 
