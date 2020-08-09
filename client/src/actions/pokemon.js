@@ -48,7 +48,8 @@ export const createPokemon = data => async (dispatch, getState) => {
 
 export const getOnePokemon = id => async (dispatch, getState) => {
   const { authentication: { token } } = getState();
-  const response = await fetch(`${imageUrl}/pokemon/${id}`, {
+  const response = await fetch(`${imageUrl}/api/pokemon/${id}`, {
+                                          ////? api addition///
     headers: {
       Authorization: `Bearer ${token}`,
     },
