@@ -3,10 +3,7 @@ import NavBar from './Navbar';
 import ACTIONS from '../App';
 
 const YourGallery = (props) => {
-    // const [pictures, setPictures] = useState('🌟 Wait for it 🌟')
     const [galleryPictures, setGalleryPictures] = useState('🌟 Wait for it 🌟')
-    console.log('galleryprops', props.gallery)
-    console.log('gallerypic', galleryPictures)
 
     useEffect(()=>{
         let count = 0;

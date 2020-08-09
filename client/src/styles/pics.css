@@ -26,6 +26,7 @@ ul {
   padding: 0px;
   width: 80vw;
   margin: auto;
+  margin-top: 0px;
   /* position: absolute; */
   overflow: hidden; 
 }
