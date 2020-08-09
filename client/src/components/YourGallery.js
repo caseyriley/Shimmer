@@ -39,7 +39,7 @@ const YourGallery = (props) => {
             </div>
             <div id="your-gallery__pic-c" className={`${props.galleryPageState ? 'page-showing' : 'page-hidden'}`} >
 
-                <div className="pic-array-container" >
+                <div className="your-gallery__pic-c__array-c" >
                     <ul>
                         {galleryPictures}
                     </ul>
