@@ -13,7 +13,7 @@
 }
 .page-showing{
     z-index: 2 !important;
-    left: 3000px;
+    left: 0px !important;
 }
 #your-gallery-top {
     position: absolute;
