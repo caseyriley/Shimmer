@@ -1,5 +1,4 @@
-import React, {useContext, useEffect, useState, useRef, useReducer} from 'react';
-import {NavLink, Route} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
 import NavBar from './Navbar';
 import BelowNav from './BelowNav';
 import PickZoom from './PickZoom';
@@ -35,14 +34,13 @@ const Explore = () => {
   const [pictures, setPictures] = useState('🌟 Wait for it 🌟')
   let numPics = 250;
 
-  const [searchArrayState, setSearchArray] = useState(['festival'])
+  const [searchArrayState, setSearchArray] = useState(['flower'])
   
   let searchString = searchArrayState.toString()
 
   
   const searchFunction = (srch) => {
     setSearchArray(srch)
-  
   }
 
 

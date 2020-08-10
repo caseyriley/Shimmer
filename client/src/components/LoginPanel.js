@@ -8,12 +8,20 @@ const LoginPanel = ({ token, login }) => {
   const [email, setEmail] = useState('demo@example.com');
   const [password, setPassword] = useState('password');
 
-  const [pictures, setPictures] = useState('Not getting picks')
+  // const [pictures, setPictures] = useState('Not getting picks')
   const [pic, setPic] = useState('background')
   const [blurState, setBlurState] = useState(false);
   let numPics = 250;
-  let searchArray = ['plants', 'landscape']
-  let searchString = searchArray.toString()
+
+  const [searchArrayState, setSearchArray] = useState(['animal'])
+  console.log('loginPanel', searchArrayState)
+  // let searchArray = ['plants', 'landscape']
+  let searchString = searchArrayState.toString()
+
+  const searchFunction = (srch) => {
+    setSearchArray(srch)
+  }
+
 
   const [dropD, setdropD] = useState(false);
   const toggleDropdown = () => {
@@ -50,7 +58,7 @@ const LoginPanel = ({ token, login }) => {
               picCount ++;
             }, 5000);
       })
-  }, []);
+  }, [searchArrayState]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -67,7 +75,7 @@ const LoginPanel = ({ token, login }) => {
   return (
     
     <main className="centered middled">
-        <LoginNav></LoginNav>
+      <LoginNav searchFunction={searchFunction} ></LoginNav>
       <div id={'invisible-click-box'} onClick={toggleDropdown} ></div>
       <div id={'main__c'} style={{
         backgroundImage: 'url(' + pic + ')',
