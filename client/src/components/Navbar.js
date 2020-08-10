@@ -1,10 +1,9 @@
-import React, { useContext, useEffect, useState, useRef, Component,  } from 'react';
-import { shallowEqual, useSelector } from 'react-redux'
-import { NavLink, Route } from "react-router-dom";
+import React, { useState} from 'react';
+
+import { NavLink} from "react-router-dom";
 import SearchBar from './SearchBar';
 import LogoutButton from './LogoutButton';
-import configureStore from '../store'
-import YourGallery from './YourGallery';
+
 
 
 
@@ -46,7 +45,7 @@ const NavBar = (props) => {
                 <span onClick={props.showGalleryPage} className="nav-c__link-box__link">You</span>
                 {/* <NavLink to="/" activeClassName="nav-c__link-box__link" >You</NavLink> */}
                 <NavLink to="/" onClick={props.hideGallery} activeClassName="nav-c__link-box__link" >Explore</NavLink>
-                <NavLink to="/" activeClassName="nav-c__link-box__link" >Prints</NavLink>
+                <NavLink to="/" id="nav-c__link-box__prints" activeClassName="nav-c__link-box__link" >Prints</NavLink>
                 <NavLink id="get-pro" to="/" activeClassName="nav-c__link-box__link" >Get Pro</NavLink>
             </div>
             <div className="nav-c__spacer"></div>

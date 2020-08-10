@@ -75,8 +75,12 @@
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     font-size: 15px;
 }
+#nav-c__link-box__prints {
+    text-decoration: line-through green;
+}
 #get-pro {
     width: 100px;
+    text-decoration: line-through green;
 }
 
 .nav-c__spacer {
@@ -198,6 +202,7 @@
     font-size: 15px;
     line-height: 20px;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    text-decoration: line-through green;
 }
 #logout-button-holder button{
     margin: 0px 0px 15px 15px;

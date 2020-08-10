@@ -44,17 +44,18 @@
     font-weight: 400;
     line-height: 170%;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    text-decoration: line-through green;
 }
 .left-c__link-2 {
     text-decoration: none;
     color: grey;
     margin-left: 30px;
     margin-right: 0px;
-    /* width: 100px; */
     font-size: 12pt;
     font-weight: 400;
     line-height: 170%;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    text-decoration: line-through green;
 }
 .left-c__link-3 {
     text-decoration: none;
@@ -66,6 +67,7 @@
     font-weight: 400;
     line-height: 170%;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    text-decoration: line-through green;
 }
 
 .caret-down {
