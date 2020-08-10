@@ -13,7 +13,7 @@
 }
 .page-showing{
     z-index: 2 !important;
-    left: 0px;
+    left: 3000px;
 }
 #your-gallery-top {
     position: absolute;
@@ -39,7 +39,7 @@
     position: fixed;
     top: 55px;
     left: 140px;
-    filter: invert();
+    /* filter: invert(); */
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     font-size: 14px;
 }

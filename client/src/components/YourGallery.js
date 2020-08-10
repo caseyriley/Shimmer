@@ -4,7 +4,7 @@ import ACTIONS from '../App';
 
 const YourGallery = (props) => {
     const [galleryPictures, setGalleryPictures] = useState('🌟 Wait for it 🌟')
-
+    console.log(props.galleryPageState)
     useEffect(()=>{
         let count = 0;
         let picArray = props.gallery.map((srcPath)=>{
