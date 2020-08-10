@@ -1,7 +1,7 @@
 #your-gallery {
     position: fixed;
     top: 0px;
-    left: 0px;
+    left: -3000px;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -10,12 +10,10 @@
     overflow: scroll;
     background-color: white;
     z-index: -1;
-    opacity: 0%;
-
 }
 .page-showing{
     z-index: 2 !important;
-    /* opacity: 100% !important; */
+    left: 0px;
 }
 #your-gallery-top {
     position: absolute;
@@ -23,7 +21,7 @@
     left: 0px;
     height: 330px;
     width: 100vw;
-    /* border: 1px solid hotpink; */
+
     
 }
 
@@ -41,7 +39,7 @@
     position: fixed;
     top: 55px;
     left: 140px;
-    /* filter: invert(); */
+    filter: invert();
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     font-size: 14px;
 }
