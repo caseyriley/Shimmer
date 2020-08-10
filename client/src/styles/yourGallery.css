@@ -15,7 +15,7 @@
 }
 .page-showing{
     z-index: 2 !important;
-    opacity: 100% !important;
+    /* opacity: 100% !important; */
 }
 #your-gallery-top {
     position: absolute;
