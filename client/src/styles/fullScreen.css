@@ -14,12 +14,19 @@
 .full-screen__pic {
     max-height: 77vh;
 }
+
 .zoomed-in {
     margin-top: 0px;
     height: 100vh;
     z-index: 11;
     top: 0px;
     position: fixed;  
+}
+.normal-size {
+    z-index: 11;
+}
+.hidden {
+    top: 3000px;
 }
 #back-arrow {
     height: 20px;

@@ -10,26 +10,30 @@ import YourGallery from './YourGallery';
 
 const Explore = () => {
  
+  const [layoutState, setLayoutState] = useState(true);
+  console.log(layoutState)
+
+  const layoutStateTrue = () => {
+    setLayoutState(true);
+  };
+  const layoutStateFalse = () => {
+    setLayoutState(false);
+  };
+
   const [gallery, setgallery] = useState([]);
 
   const addToGallery = (largePic) => {
     setgallery([...gallery, largePic])
-  }
+  };
 
   const [galleryPageState, setGalleryPageState] = useState(false);
   const showGalleryPage = () => {
     setGalleryPageState(true)
-  }
+  };
 
   const hideGallery = () => {
     setGalleryPageState(false)
   }
-
-
- 
-
-  
-  
 
   const [pictures, setPictures] = useState('🌟 Wait for it 🌟')
   let numPics = 250;
@@ -85,12 +89,8 @@ const Explore = () => {
         }
 
         return(
-          <li key={pic.id} >
-            {/* <div className="pic-frame"> */}
-            <img className="pic" loading="lazy" alt="loading..." onClick={zoomFunction}  src={
-              srcPath ? srcPath : "https://twistedsifter.files.wordpress.com/2019/04/mystical-by-nei-burnell-2.jpg"
-                }></img>
-            {/* </div>   */}
+          <li key={pic.id} className={`${layoutState ? "li-layout-1" : "li-layout-2"}`} >
+            <img className="pic" loading="lazy" alt="loading..." onClick={zoomFunction}  src={srcPath}></img>
           </li>
         )
       })
@@ -107,9 +107,14 @@ const Explore = () => {
         <BelowNav fullScreen={fullScreen} ></BelowNav>
         <PickZoom addToGallery={addToGallery} fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
         <YourGallery hideGallery={hideGallery} galleryPageState={galleryPageState} gallery={gallery} ></YourGallery>
-        <div 
-        // className={`${ fullScreen ? 'backwards' : 'foreground'}`}
-        >
+        <div>
+          <div onClick={layoutStateTrue} id={'layout-mozaic'} >
+            <div className={'layout-mozaic__short'}></div>
+            <div className={'layout-mozaic__long'}></div>
+            <div className={'layout-mozaic__long'}></div>
+            <div className={'layout-mozaic__short'}></div>
+          </div>
+          <div onClick={layoutStateFalse} id={'layout-square'} ></div>
           <div className="pic-array-container" >
             <ul>
             {pictures}

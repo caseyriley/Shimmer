@@ -4,12 +4,11 @@ import ACTIONS from '../App';
 
 const YourGallery = (props) => {
     const [galleryPictures, setGalleryPictures] = useState('🌟 Wait for it 🌟')
-    console.log(props.galleryPageState)
     useEffect(()=>{
         let count = 0;
         let picArray = props.gallery.map((srcPath)=>{
             count++;
-            return (
+            return (  
                 <li 
                 // key={pic.id} 
                 key={count} 
@@ -28,7 +27,7 @@ const YourGallery = (props) => {
     return (
         <div id="your-gallery" className={`${props.galleryPageState ? 'page-showing' : 'page-hidden'}`}>
         {/* <div id="your-gallery" className='page-showing'> */}
-            <NavBar></NavBar>
+            {/* <NavBar></NavBar> */}
             <div id="your-gallery-top">
                 <div onClick={props.hideGallery}> <ion-icon id="your-gallery__back-arrow" name="arrow-back-outline"></ion-icon> <p id="your-gallery__back-arrow_text" >Back to explore</p> </div>
                 <p id="your-gallery__title">Your Gallery</p>
@@ -49,5 +48,6 @@ const YourGallery = (props) => {
     )
     
 }
+
 
 export default YourGallery;
