@@ -5,19 +5,11 @@
     flex-wrap: wrap;
     width: 80vw;
     height: 1000px;
-    /* max-width: 80%; */
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
     box-sizing: border-box;
     border-color: 20px solid blue;
-}
-.pic {
-    height: 40vh;
-    min-width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-    
 }
 ul {
   display: flex;
@@ -29,17 +21,28 @@ ul {
   margin-top: 0px;
   /* position: absolute; */
   overflow: hidden; 
+  margin-bottom: 0px;
+  
 }
-
 li {
   height: 40vh; 
   flex-grow: 1;
   margin: 3px;
 }
-.pic-frame {
+.pic {
+    height: 40vh;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    
+}
+
+
+
+/* .pic-frame {
     height: 40vh;
     flex-grow: 1;
-}
+} */
 .backwards {
   top: -500px !important;
   opacity: 0%;
