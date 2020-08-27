@@ -1,26 +1,38 @@
 @media screen and (max-width: 564px) {
-    body {
+  body {
         width: 100vw;
-    }
-    .pic-array-container {
+  }
+  .pic-array-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100vw;
     height: 2000px;
-    margin-top: 150px;
     box-sizing: border-box;
-    border-color: 20px solid blue;
     
 }
-    .pic {
+  .your-gallery__pic-c__array-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: 2000px;
+    box-sizing: border-box;
+}
+  .pic {
     height: 65vh;
     width: 100%;
     object-fit: cover;
-    vertical-align: bottom;
-    
-}
+    vertical-align: bottom;  
+} 
+  .gallery-pic {
+    height: 65vh;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: bottom; 
+  }
 ul {
   display: flex;
   justify-content: flex-start;
@@ -38,7 +50,7 @@ li {
   display: inline-block;
   width: 100vw;
 }
-.pic-frame {
+  .pic-frame {
     height: 65vh;
     flex-grow: 1;
 }
