@@ -26,6 +26,7 @@
     width: 100%;
     object-fit: cover;
     vertical-align: bottom;  
+    
 } 
   .gallery-pic {
     height: 65vh;
@@ -40,6 +41,7 @@ ul {
   flex-direction: column;
   list-style-type: none;
   padding: 0px;
+  
 
 }
 
@@ -49,6 +51,7 @@ li {
   margin: 3px;
   display: inline-block;
   width: 100vw;
+  margin-left: 0px;
 }
   .pic-frame {
     height: 65vh;

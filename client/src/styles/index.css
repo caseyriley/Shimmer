@@ -1,5 +1,8 @@
 /* TODO Add site wide styles */
 .body {
+    position: fixed;
+    top: 0px;
+    left: 0px;
     color: #212124;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     display: flex;
