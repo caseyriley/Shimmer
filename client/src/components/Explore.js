@@ -105,12 +105,10 @@ const Explore = () => {
         <header>
         </header>
         <NavBar hideGallery={hideGallery} showGalleryPage={showGalleryPage} searchFunction={searchFunction} ></NavBar>
-        <BelowNav fullScreen={fullScreen} ></BelowNav>
+        <BelowNav fullScreen={fullScreen} layoutState={layoutState}></BelowNav>
         <PickZoom addToGallery={addToGallery} fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
         <YourGallery hideGallery={hideGallery} galleryPageState={galleryPageState} gallery={gallery} ></YourGallery>
         <div>
-          <LayoutMozaic layoutStateTrue={layoutStateTrue}/>
-          <div onClick={layoutStateFalse} id={'layout-square'} ></div>
           <div className="pic-array-container" >
             <ul>
             {pictures}
