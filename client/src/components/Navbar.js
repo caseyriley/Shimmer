@@ -42,11 +42,11 @@ const NavBar = (props) => {
                 <svg className="shimmer-explore" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1366 768" enableBackground="new 0 0 1366 768" ><text transform="matrix(1 0 0 1 113.1719 450.7109)" fontFamily="'DINAlternate-Bold'" fontSize="301px">shimmer</text></svg>
             </NavLink>
             <div className="nav-c__link-box">
-                <span onClick={props.showGalleryPage} className="nav-c__link-box__link">You</span>
+                <span onClick={props.showGalleryPage} className="nav-c__link-box__link">Your Gallery</span>
                 {/* <NavLink to="/" activeClassName="nav-c__link-box__link" >You</NavLink> */}
                 <NavLink to="/" onClick={props.hideGallery} activeClassName="nav-c__link-box__link" >Explore</NavLink>
-                <NavLink to="/" id="nav-c__link-box__prints" activeClassName="nav-c__link-box__link" >Prints</NavLink>
-                <NavLink id="get-pro" to="/" activeClassName="nav-c__link-box__link" >Get Pro</NavLink>
+                {/* <NavLink to="/" id="nav-c__link-box__prints" activeClassName="nav-c__link-box__link" >Prints</NavLink> */}
+                {/* <NavLink id="get-pro" to="/" activeClassName="nav-c__link-box__link" >Get Pro</NavLink> */}
             </div>
             <div className="nav-c__spacer"></div>
             <SearchBar searchFunction={props.searchFunction} ></SearchBar>

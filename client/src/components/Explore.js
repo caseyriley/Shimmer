@@ -3,6 +3,7 @@ import NavBar from './Navbar';
 import BelowNav from './BelowNav';
 import PickZoom from './PickZoom';
 import YourGallery from './YourGallery';
+import LayoutMozaic from './LayoutMozaic';
 
 
 
@@ -108,12 +109,7 @@ const Explore = () => {
         <PickZoom addToGallery={addToGallery} fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
         <YourGallery hideGallery={hideGallery} galleryPageState={galleryPageState} gallery={gallery} ></YourGallery>
         <div>
-          <div onClick={layoutStateTrue} id={'layout-mozaic'} >
-            <div className={'layout-mozaic__short'}></div>
-            <div className={'layout-mozaic__long'}></div>
-            <div className={'layout-mozaic__long'}></div>
-            <div className={'layout-mozaic__short'}></div>
-          </div>
+          <LayoutMozaic layoutStateTrue={layoutStateTrue}/>
           <div onClick={layoutStateFalse} id={'layout-square'} ></div>
           <div className="pic-array-container" >
             <ul>
