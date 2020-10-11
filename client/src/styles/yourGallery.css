@@ -20,9 +20,10 @@
     top: 0px;
     left: 0px;
     height: 330px;
-    width: 100vw;
-
-    
+    width: 100vw;   
+}
+#hide{
+    display: none;
 }
 
 #your-gallery__back-arrow {
