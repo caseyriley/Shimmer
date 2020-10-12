@@ -63,7 +63,7 @@ ul {
 .li-layout-1 {
   height: 40vh; 
   flex-grow: 1;
-  margin: 3px 0px 3px 0px;
+  margin: 3px 3px 3px 3px;
 }
 .li-layout-2 {
   height: calc(100vh - 100px); 
