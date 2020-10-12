@@ -9,9 +9,6 @@ import LogoutButton from './LogoutButton';
 
 const NavBar = (props) => {
     
-
-
-    
     const rand = function getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
     }
@@ -32,6 +29,15 @@ const NavBar = (props) => {
 
     return (
         <div className="nav-c">
+            <div className={`${transform ? "nav-c__left-modal--open" : "nav-c__left-modal--closed"}`}>
+
+                {props.galleryPageState === true ?
+                    <NavLink to="/" onClick={() => {props.hideGallery(); toggleTransform()}} className={`nav-c__left-modal__link ${transform === true ? "nav-c__left-modal__link--open" : "nav-c__left-modal__link--closed"}`} >Explore</NavLink>
+                    :
+                    <span onClick={() => {props.showGalleryPage(); toggleTransform()}} className={`nav-c__left-modal__link ${transform === true ? "nav-c__left-modal__link--open" : "nav-c__left-modal__link--closed"}`}>Your Gallery</span> 
+                }
+                
+            </div>
             <div id="tranform-box" onClick={toggleTransform} >
                 <div className={`tranform-box__line tranform-box__line-1 ${transform ? "transform-1" : "un-transform"}`} ></div>
                 <div className={`tranform-box__line tranform-box__line-2 ${transform ? "transform-2" : "un-transform"}`} ></div>
@@ -42,16 +48,20 @@ const NavBar = (props) => {
                 <svg className="shimmer-explore" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 1366 768" enableBackground="new 0 0 1366 768" ><text transform="matrix(1 0 0 1 113.1719 450.7109)" fontFamily="'DINAlternate-Bold'" fontSize="301px">shimmer</text></svg>
             </NavLink>
             <div className="nav-c__link-box">
-                <span onClick={props.showGalleryPage} className="nav-c__link-box__link">Your Gallery</span>
+                {props.galleryPageState === true ?
+                    <NavLink to="/" onClick={props.hideGallery} activeClassName="nav-c__link-box__link" >Explore</NavLink>
+                    :
+                    <span onClick={props.showGalleryPage} className="nav-c__link-box__link">Your Gallery</span>
+                }
                 {/* <NavLink to="/" activeClassName="nav-c__link-box__link" >You</NavLink> */}
-                <NavLink to="/" onClick={props.hideGallery} activeClassName="nav-c__link-box__link" >Explore</NavLink>
+                
                 {/* <NavLink to="/" id="nav-c__link-box__prints" activeClassName="nav-c__link-box__link" >Prints</NavLink> */}
                 {/* <NavLink id="get-pro" to="/" activeClassName="nav-c__link-box__link" >Get Pro</NavLink> */}
             </div>
             <div className="nav-c__spacer"></div>
             <SearchBar searchFunction={props.searchFunction} ></SearchBar>
             <div className="nav-c__icon-c">
-                <img id="cloudArrow" alt='aroow' src={require("../images/cloudArrow.png")}/>
+                {/* <img id="cloudArrow" alt='aroow' src={require("../images/cloudArrow.png")}/> */}
                 <svg viewBox="0 0 24 24" id="icon-search"><path d="M21.707 18.88l-4.823-4.824A7.945 7.945 0 0 0 18 10c0-4.41-3.59-8-8-8s-8 3.59-8 8 3.59 8 8 8c1.48 0 2.865-.412 4.056-1.116l4.823 4.823a1 1 0 0 0 1.413 0l1.414-1.414a1 1 0 0 0 0-1.414zM4 10c0-3.31 2.69-6 6-6s6 2.69 6 6-2.69 6-6 6-6-2.69-6-6z"></path></svg>
                 <img id="bell" alt='bell' src={require("../images/bell.png")}/>
                 <div id="camera" onClick={toggleDropdown}>  

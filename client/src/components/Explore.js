@@ -89,7 +89,7 @@ const Explore = () => {
       <div>
         <header>
         </header>
-        <NavBar hideGallery={hideGallery} showGalleryPage={showGalleryPage} searchFunction={searchFunction} ></NavBar>
+        <NavBar galleryPageState={galleryPageState} hideGallery={hideGallery} showGalleryPage={showGalleryPage} searchFunction={searchFunction} ></NavBar>
         <BelowNav fullScreen={fullScreen} layoutStateTrue={layoutStateTrue} layoutStateFalse={layoutStateFalse}></BelowNav>
         <PickZoom addToGallery={addToGallery} fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
         <YourGallery hideGallery={hideGallery} galleryPageState={galleryPageState} gallery={gallery} ></YourGallery>

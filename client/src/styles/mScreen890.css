@@ -3,7 +3,7 @@
         visibility: hidden;
     }
     .nav-c__search {
-        width: 150px;
+        min-width: 150px;
     }
     .nav-c__spacer {
         width: 0px;
