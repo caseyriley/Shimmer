@@ -47,11 +47,26 @@ ul {
 
 li {
   height: 65vh; 
-  flex-grow: 1;
+  /* flex-grow: 1; */
   margin: 3px;
-  display: inline-block;
+  /* display: inline-block; */
   width: 100vw;
   margin-left: 0px;
+}
+.li-layout-1 {
+  /* height: 40vh;  */
+  width: 100vw;
+  height: auto;
+  flex-grow: 1;
+  margin: 3px 0px 3px 0px;
+}
+.li-layout-2 {
+  /* height: calc(100vh - 100px);  */
+  width: 100vw;
+  height: auto;
+  flex-grow: 1;
+  /* margin: 0px 0px 0px 0px; */
+  margin: 3px 0px 3px 0px;
 }
   .pic-frame {
     height: 65vh;

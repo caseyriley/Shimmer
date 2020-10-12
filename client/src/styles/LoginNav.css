@@ -203,6 +203,7 @@
     background-color: transparent;
     color: #212124;
     border: none;
+    outline: none;
     
 }
 #invisible-click-box {

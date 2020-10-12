@@ -59,9 +59,9 @@ const NavBar = (props) => {
                         <p className='camera__dropdown__greeting' >Jambo,</p>
                         <p className='camera__dropdown__paragraph' >Now you know how to greet people in Swahili</p>
                         <div className='camera__dropdown__items-box' ></div>
-                        <NavLink to='/' className='camera__dropdown__nav-link' >Flickr Mail</NavLink>
+                        {/* <NavLink to='/' className='camera__dropdown__nav-link' >Flickr Mail</NavLink>
                         <NavLink to='/' className='camera__dropdown__nav-link' >Settings</NavLink>
-                        <NavLink to='/' className='camera__dropdown__nav-link' >Help</NavLink>
+                        <NavLink to='/' className='camera__dropdown__nav-link' >Help</NavLink> */}
                         <LogoutButton  />
                     </div>
                 </div>

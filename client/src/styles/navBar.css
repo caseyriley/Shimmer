@@ -131,11 +131,13 @@
 #cloudArrow {
     height: 33px;
     width: 33px; 
+    opacity: 0;
 }
 #bell {
     height: 30px;
     width: 30px;
     margin-left: 18px;  
+    opacity: 0;
 }
 #icon-search {
     height: 25px;
@@ -159,11 +161,11 @@
     position: absolute;
     display: flex;
     flex-flow: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
     top: 50px;
     left: -260px;
-    height: 320px;
+    height: 155px;
     width: 300px;
     background-color: white;
     box-shadow: 2px 1px 2px 2px rgba(147, 147, 147, 0.1);
@@ -172,7 +174,7 @@
     border: 1px solid rgb(160, 160, 160);
 }
 .camera__dropdown__greeting {
-    margin: 0px 15px 15px 15px;
+    margin: 15px 15px 15px 15px;
     color: #212124;
     font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
     font-size: 20px;
@@ -189,9 +191,9 @@
 }
 .camera__dropdown__items-box {
     width: 100%;
-    height: 90px;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
+    height: 0px;
+    /* border-top: 1px solid gray; */
+    border-bottom: 1px solid rgb(160, 160, 160);
     margin-bottom: 15px;
     
 }
