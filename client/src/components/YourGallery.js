@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import NavBar from './Navbar';
-import ACTIONS from '../App';
+
 
 const YourGallery = (props) => {
+
+
     const [galleryPictures, setGalleryPictures] = useState('🌟 Wait for it 🌟')
     useEffect(()=>{
         let count = 0;
@@ -13,7 +14,7 @@ const YourGallery = (props) => {
                 // key={pic.id} 
                 key={count} 
                 >
-                    <img className="gallery-pic" loading="lazy" alt="loading..."
+                    <img className={"gallery-pic"} loading="lazy" alt="loading..."
                     //  onClick={zoomFunction} 
                      src={
                         srcPath ? srcPath : "https://twistedsifter.files.wordpress.com/2019/04/mystical-by-nei-burnell-2.jpg"

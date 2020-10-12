@@ -3,7 +3,7 @@ import NavBar from './Navbar';
 import BelowNav from './BelowNav';
 import PickZoom from './PickZoom';
 import YourGallery from './YourGallery';
-import LayoutMozaic from './LayoutMozaic';
+
 
 
 
@@ -11,14 +11,14 @@ import LayoutMozaic from './LayoutMozaic';
 
 const Explore = () => {
  
-  const [layoutState, setLayoutState] = useState(true);
+  const [layoutState, setLayoutState] = useState("li-layout-1");
   console.log(layoutState)
 
   const layoutStateTrue = () => {
-    setLayoutState(true);
+    setLayoutState("li-layout-1");
   };
   const layoutStateFalse = () => {
-    setLayoutState(false);
+    setLayoutState("li-layout-2");
   };
 
   const [gallery, setgallery] = useState([]);
@@ -36,7 +36,7 @@ const Explore = () => {
     setGalleryPageState(false)
   }
 
-  const [pictures, setPictures] = useState('🌟 Wait for it 🌟')
+  const [pictures, setPictures] = useState()
   let numPics = 250;
 
   const [searchArrayState, setSearchArray] = useState(['flower'])
@@ -80,22 +80,7 @@ const Explore = () => {
       return response.json();
     })
     .then(function(j){
-      // alert(JSON.stringify(j));
-      let picArray = j.photos.photo.map((pic) => {
-        let srcPath = 'https://farm'+pic.farm+'.staticflickr.com/'+pic.server+'/'+pic.id+'_'+pic.secret+'.jpg';
-        
-        const zoomFunction = () => {
-          setLargePic(srcPath);
-          toggleFullScreen()
-        }
-
-        return(
-          <li key={pic.id} className={`${layoutState ? "li-layout-1" : "li-layout-2"}`} >
-            <img className="pic" loading="lazy" alt="loading..." onClick={zoomFunction}  src={srcPath}></img>
-          </li>
-        )
-      })
-      setPictures(picArray);
+      setPictures(j.photos.photo);
     })
   }, [JSON.stringify(searchArrayState)])
 
@@ -105,13 +90,20 @@ const Explore = () => {
         <header>
         </header>
         <NavBar hideGallery={hideGallery} showGalleryPage={showGalleryPage} searchFunction={searchFunction} ></NavBar>
-        <BelowNav fullScreen={fullScreen} layoutState={layoutState}></BelowNav>
+        <BelowNav fullScreen={fullScreen} layoutStateTrue={layoutStateTrue} layoutStateFalse={layoutStateFalse}></BelowNav>
         <PickZoom addToGallery={addToGallery} fullScreen={fullScreen} toggleFullScreen={toggleFullScreen} largePic={largePic} starState={starState} toggleStar={toggleStar} zoomOut={zoomOut} ></PickZoom>
         <YourGallery hideGallery={hideGallery} galleryPageState={galleryPageState} gallery={gallery} ></YourGallery>
         <div>
           <div className="pic-array-container" >
             <ul>
-            {pictures}
+              {pictures ? pictures.map((pic) => {
+                let srcPath = 'https://farm' + pic.farm + '.staticflickr.com/' + pic.server + '/' + pic.id + '_' + pic.secret + '.jpg';
+                return (
+                  <li key={pic.id} className={layoutState} >
+                    <img className="pic" loading="lazy" alt="loading..." onClick={() => { setLargePic(srcPath); toggleFullScreen() }} src={srcPath}></img>
+                  </li>
+                )
+              }) : ""}
             </ul>
           </div>
         </div>
