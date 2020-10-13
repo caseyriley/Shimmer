@@ -271,3 +271,7 @@
 .nav-c__left-modal__link--closed{
     opacity: 0;
 }
+#how-dropdown__white-space{
+    height: 100px;
+    width: 100%;
+}

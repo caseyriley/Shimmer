@@ -38,7 +38,9 @@ const LoginNav = (props) => {
     return (
         <>
             {howToState === true ? <div id="how-dropdown" onClick={()=> setHowToState(false)}>
-            <p>Welcome to shimmer. </p>
+            <div id={"how-dropdown__title"}>
+                <h2>Welcome to shimmer. </h2>
+            </div>
             <div></div>
             <p>Here are the steps to using shimmer: </p>
             <p className="indent">1. Login using the login button located in the
@@ -47,7 +49,7 @@ const LoginNav = (props) => {
             <p className="indent">2. Type in whatever key word or words you wish
              to in the search bar at the top of the page and press enter.
              Images relating to your query should populate below in order of the 
-             most recent uploaded.</p>
+             most recent upload.</p>
             <img className={"how-dropdown__img"} src={navbarScreenShot} alt={""}/>
             <p className="indent">3. Choose your preferred photo layout style by
              clicking on one of the grey icons located below the navigation bar.</p>
@@ -70,7 +72,7 @@ const LoginNav = (props) => {
                 <img className={"how-dropdown__img-star"} src={trasnformNavScreenShot} alt={""} />
                 <img className={"how-dropdown__img-star"} src={YourGalleryDropdownScreenShot} alt={""} />
             </div>
-            <p></p>
+            <div id={"how-dropdown__white-space"}></div>
         </div>
         :
         ""

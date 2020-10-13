@@ -34,7 +34,7 @@ const NavBar = (props) => {
             <div className={`${transform ? "nav-c__left-modal--open" : "nav-c__left-modal--closed"}`}>
 
                 {props.galleryPageState === true ?
-                    <NavLink to="/" onClick={() => {props.hideGallery(); toggleTransform()}} className={`nav-c__left-modal__link ${transform === true ? "nav-c__left-modal__link--open" : "nav-c__left-modal__link--closed"}`} >Explore</NavLink>
+                    <NavLink to="/" onClick={() => {props.hideGallery(); toggleTransform()}} className={`nav-c__left-modal__link ${transform === true ? "nav-c__left-modal__link--open" : "nav-c__left-modal__link--closed"}`} >Explore Page</NavLink>
                     :
                     <span onClick={() => {props.showGalleryPage(); toggleTransform()}} className={`nav-c__left-modal__link ${transform === true ? "nav-c__left-modal__link--open" : "nav-c__left-modal__link--closed"}`}>Your Gallery</span> 
                 }
@@ -51,7 +51,7 @@ const NavBar = (props) => {
             </NavLink>
             <div className="nav-c__link-box">
                 {props.galleryPageState === true ?
-                    <NavLink to="/" onClick={props.hideGallery} activeClassName="nav-c__link-box__link" >Explore</NavLink>
+                    <NavLink to="/" onClick={props.hideGallery} activeClassName="nav-c__link-box__link" >Explore Page</NavLink>
                     :
                     <span onClick={props.showGalleryPage} className="nav-c__link-box__link">Your Gallery</span>
                 }
