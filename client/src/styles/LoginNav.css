@@ -223,10 +223,24 @@
     width: 100vw;
     background-color: rgb(183, 183, 244);
     z-index: 1;
+    overflow-y: scroll;
 }
 #how-dropdown p {
     margin: 20px;
 }
 .indent {
     text-indent: 15px;
+}
+.how-dropdown__img{
+    margin: 10px 0px 10px 40px;
+}
+.how-dropdown__img-star{
+    height: 165px;
+    margin: 10px 0px 10px 40px;
+}
+#star-and-back-arrow-c,
+#your-gallery-nav-img-c {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }

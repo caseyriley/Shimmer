@@ -7,6 +7,8 @@ import LogoutButton from './LogoutButton';
 
 
 
+
+
 const NavBar = (props) => {
     
     const rand = function getRandomInt(max) {
