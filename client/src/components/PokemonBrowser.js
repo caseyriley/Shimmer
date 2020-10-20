@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { NavLink, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 // import { imageUrl } from '../config';
-import LogoutButton from './LogoutButton';
-import PokemonDetail from './PokemonDetail';
+// import LogoutButton from './LogoutButton';
+// import PokemonDetail from './PokemonDetail';
 import PokemonForm from './PokemonForm';
 // import Fab from './Fab';
 import { getPokemon, showForm } from '../actions/pokemon';
@@ -18,7 +18,7 @@ const PokemonBrowser = ({
   getPokemon,
   showForm, 
 }) => {
-  const { pokemonId } = match.params;
+  // const { pokemonId } = match.params;
 
   useEffect(() => {
     getPokemon();

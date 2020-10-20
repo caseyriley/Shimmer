@@ -16,7 +16,7 @@ const LoginPanel = ({ token, login }) => {
   const [searchArrayState, setSearchArray] = useState(['animal'])
   console.log('loginPanel', searchArrayState)
   // let searchArray = ['plants', 'landscape']
-  let searchString = searchArrayState.toString()
+  // let searchString = searchArrayState.toString()
 
   const searchFunction = (srch) => {
     setSearchArray(srch)
@@ -30,7 +30,7 @@ const LoginPanel = ({ token, login }) => {
   };
 
   useEffect(() => {
-    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + searchString + '&per_page=' + 250 + '&page=1&format=json&nojsoncallback=1')
+    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + `${searchArrayState}` + '&per_page=' + 250 + '&page=1&format=json&nojsoncallback=1')
       .then(function (response) {
         return response.json();
       })

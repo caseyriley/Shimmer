@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink, Route } from "react-router-dom";
 import LayoutMozaic from './LayoutMozaic';
 
 const BelowNav = (props) => {

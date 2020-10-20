@@ -1,16 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import BelowNav from './BelowNav';
 
 
 const YourGallery = (props) => {
 
     const [keyState, setKeyState] = useState(1);
-    function uniqueKey(){
-        setKeyState(keyState + 1);
-        return keyState
-    }
+    // function uniqueKey(){
+    //     setKeyState(keyState + 1);
+    //     return keyState
+    // }
 
-    const [galleryPictures, setGalleryPictures] = useState('🌟 Wait for it 🌟')
+    // const [galleryPictures, setGalleryPictures] = useState('🌟 Wait for it 🌟')
     // useEffect(()=>{
     //     let count = 0;
     //     let picArray = props.gallery.map((srcPath)=>{

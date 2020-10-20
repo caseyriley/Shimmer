@@ -1,6 +1,6 @@
-import React, { useContext, useEffect, useState, useRef, Component } from 'react';
-import { NavLink, Route } from "react-router-dom";
-import LoginSearch from './LoginSearch';
+import React, { useState } from 'react';
+import { NavLink} from "react-router-dom";
+
 import navbarScreenShot from '../images/navbarScreenShot.png';
 import layoutIconsScreenShot from '../images/layoutIconsScreenShot.png';
 import faveStarScreenShot from '../images/faveStarScreenShot.png';
@@ -15,16 +15,16 @@ import YourGalleryDropdownScreenShot from '../images/YourGalleryDropdownScreenSh
 const LoginNav = (props) => {
 
     const [dropD, setdropD] = useState(false);
-    const toggleDropdown = () => {
-        const nextState = !dropD;
-        setdropD(nextState);
-    };
+    // const toggleDropdown = () => {
+    //     const nextState = !dropD;
+    //     setdropD(nextState);
+    // };
 
     const [transform, setTransform] = useState(false);
-    const toggleTransform = () => {
-        const nextState = !transform;
-        setTransform(nextState);
-    };
+    // const toggleTransform = () => {
+    //     const nextState = !transform;
+    //     setTransform(nextState);
+    // };
 
     const [howToState, setHowToState] = useState(false);
     function toggleHowToState(){

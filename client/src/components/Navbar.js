@@ -11,9 +11,9 @@ import LogoutButton from './LogoutButton';
 
 const NavBar = (props) => {
     
-    const rand = function getRandomInt(max) {
-        return Math.floor(Math.random() * Math.floor(max));
-    }
+    // const rand = function getRandomInt(max) {
+    //     return Math.floor(Math.random() * Math.floor(max));
+    // }
 
     const [dropD, setdropD] = useState(false);
     const toggleDropdown = () => {
