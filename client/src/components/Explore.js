@@ -37,11 +37,11 @@ const Explore = () => {
   }
 
   const [pictures, setPictures] = useState()
-  let numPics = 250;
+  // let numPics = 500;
 
   const [searchArrayState, setSearchArray] = useState(['flower'])
   
-  let searchString = searchArrayState.toString()
+  // let searchString = searchArrayState.toString()
 
   
   const searchFunction = (srch) => {
@@ -75,14 +75,14 @@ const Explore = () => {
 
   useEffect(() => {
     // alert(process.env.REACT_APP_API_KEY);
-    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + searchArrayState.toString()+'&per_page='+numPics+'&page=1&format=json&nojsoncallback=1')
+    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + searchArrayState.toString()+'&per_page='+500+'&page=1&format=json&nojsoncallback=1')
     .then(function(response){
       return response.json();
     })
     .then(function(j){
       setPictures(j.photos.photo);
     })
-  }, [JSON.stringify(searchArrayState)])
+  }, [searchArrayState])
 
   
     return (

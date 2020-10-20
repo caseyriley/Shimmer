@@ -11,7 +11,7 @@ const LoginPanel = ({ token, login }) => {
   // const [pictures, setPictures] = useState('Not getting picks')
   const [pic, setPic] = useState('background')
   const [blurState, setBlurState] = useState(false);
-  let numPics = 250;
+  // let numPics = 250; 
 
   const [searchArrayState, setSearchArray] = useState(['animal'])
   console.log('loginPanel', searchArrayState)
@@ -30,8 +30,7 @@ const LoginPanel = ({ token, login }) => {
   };
 
   useEffect(() => {
-    // console.log(process.env.REACT_APP_API_KEY);  
-    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + searchString + '&per_page=' + numPics + '&page=1&format=json&nojsoncallback=1')
+    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + searchString + '&per_page=' + 250 + '&page=1&format=json&nojsoncallback=1')
       .then(function (response) {
         return response.json();
       })
