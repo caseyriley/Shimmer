@@ -4,7 +4,7 @@ import BelowNav from './BelowNav';
 
 const YourGallery = (props) => {
 
-    const [keyState, setKeyState] = useState(1);
+    // const [keyState, setKeyState] = useState(1);
     // function uniqueKey(){
     //     setKeyState(keyState + 1);
     //     return keyState

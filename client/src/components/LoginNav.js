@@ -14,13 +14,13 @@ import YourGalleryDropdownScreenShot from '../images/YourGalleryDropdownScreenSh
 
 const LoginNav = (props) => {
 
-    const [dropD, setdropD] = useState(false);
+    // const [dropD, setdropD] = useState(false);
     // const toggleDropdown = () => {
     //     const nextState = !dropD;
     //     setdropD(nextState);
     // };
 
-    const [transform, setTransform] = useState(false);
+    // const [transform, setTransform] = useState(false);
     // const toggleTransform = () => {
     //     const nextState = !transform;
     //     setTransform(nextState);

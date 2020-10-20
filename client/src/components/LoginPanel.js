@@ -30,7 +30,7 @@ const LoginPanel = ({ token, login }) => {
   };
 
   useEffect(() => {
-    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + `${searchArrayState}` + '&per_page=' + 250 + '&page=1&format=json&nojsoncallback=1')
+    fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + searchArrayState + '&per_page=' + 250 + '&page=1&format=json&nojsoncallback=1')
       .then(function (response) {
         return response.json();
       })
