@@ -1,15 +1,18 @@
 /* TODO Add site wide styles */
 .body {
-    position: fixed;
+    position: relative;
     top: 0px;
     left: 0px;
     color: #212124;
-    font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif;
+    /* font-family: Proxima Nova,helvetica neue,helvetica,arial,sans-serif; */
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
     width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow-y: scroll;
 }
 
 

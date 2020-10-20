@@ -73,7 +73,7 @@ const LoginPanel = ({ token, login }) => {
 
   return (
     
-    <main className="centered middled">
+    <main className="centered-middled">
       <LoginNav searchFunction={searchFunction} ></LoginNav>
       <div id={'invisible-click-box'} onClick={toggleDropdown} ></div>
       <div id={'main__c'} style={{
