@@ -1,8 +1,11 @@
 const bearerToken = require('express-bearer-token');
 const jwt = require('jsonwebtoken');
 // const uuid = require('uuid').v4;
-const {v4} = require('uuid');
-const uuid = v4;
+
+// const {v4} = require('uuid');
+// const uuid = v4;
+
+const { uuid } = require('uuidv4');
 
 const { jwtConfig: { secret, expiresIn } } = require('../../config');
 const PlayerRepository = require('../../db/player-repository');
