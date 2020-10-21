@@ -75,7 +75,7 @@ const LoginNav = (props) => {
             <div id={"how-dropdown__white-space"}></div>
         </div>
         :
-        ""
+        null
         }
         <div className="login-nav-c">
             <NavLink to="/" activeClassName="login-nav-c__flicker" >
