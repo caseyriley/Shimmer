@@ -18,7 +18,7 @@
     "model:generate": "sequelize-cli model:generate",
     "seed:generate": "sequelize-cli seed:generate",
     "start": "dotenv ./bin/www",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client && npm run db:redo"
+    "postinstall": "npm install --prefix client && npm run build --prefix client && npm run db:redo"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
