@@ -41,8 +41,7 @@
     "sequelize-cli": "^5.5.1",
     "stringify": "^5.2.0",
     "uuid": "^8.3.1",
-    "uuidv4": "^6.2.4",
-    "webpack-dev-server": "^3.11.0"
+    "uuidv4": "^6.2.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.3"
