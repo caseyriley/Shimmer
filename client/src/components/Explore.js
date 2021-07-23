@@ -13,6 +13,7 @@ const Explore = () => {
  
   const [layoutState, setLayoutState] = useState("li-layout-1");
   console.log(layoutState)
+  console.log('process.env.REACT_APP_API_KEY',process.env.REACT_APP_API_KEY)
 
   const layoutStateTrue = () => {
     setLayoutState("li-layout-1");
@@ -74,7 +75,6 @@ const Explore = () => {
   }
 
   useEffect(() => {
-    // alert(process.env.REACT_APP_API_KEY);
     fetch('https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=' + process.env.REACT_APP_API_KEY + '&tags=' + searchArrayState.toString()+'&per_page='+500+'&page=1&format=json&nojsoncallback=1')
     .then(function(response){
       return response.json();
