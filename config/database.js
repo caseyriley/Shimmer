@@ -27,7 +27,7 @@ module.exports = {
     seederStorage: 'sequelize',
     dialectOptions: {
       ssl: {
-        require: true, // This will help you. But you will see nwe error
+        require: true, // This will help you. But you will see new error
         rejectUnauthorized: false // This line will fix new error
       }
     },
